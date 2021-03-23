@@ -1,0 +1,304 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(231, 231, 231);
+}
+
+body {
+    background-color: rgb(69, 131, 254);
+}
+
+input{
+    text-align: center;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    color: #616161;
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+}
+
+th {
+    background-color: #326295;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+
+td, th {
+    padding: 1em 1.5em;
+    text-align: center;
+}
+
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: rgba(50,98,149,.3);
+}
+
+#pasapalabra{
+    margin: auto;
+    display: grid;
+    grid-template: repeat(2, 28vmin)  30vmin 5vmin / 100%;
+    word-wrap: initial;
+    width: 95vw;
+    height: 95vh;
+    max-height: 100vmin;
+}
+
+#donutLetters{
+    display:none;
+}
+
+#pasapalabraTitle{
+    display:none;
+    grid-area: 1 / 1 / span 2 / 1;
+    margin: auto;
+    padding: 3vmin 0 0 3vmin;
+    font-size: 5vmin;
+}
+
+#playButton{
+    outline: none;
+    font-size: 6vmin;
+    background: rgb(0, 102, 216);
+    color: white;
+    padding: 0.8vmin 0.8vmin 0.8vmin 0.8vmin;
+    border-radius: 20%;
+    margin-bottom: 12vmin;
+}
+/* 
+.questions{
+    outline: none;
+    font-size: 4vmin;
+    background: rgb(0, 102, 216);
+    color: white;
+    padding: 0.8vmin 0.8vmin 0.8vmin 0.8vmin;
+    border-radius: 20%;
+} */
+
+#instructions{
+    font-size: 3vmin;
+}
+
+#questions {
+    margin: auto;
+    font-size: 5vmin;
+    display: none;
+}
+
+#answers{
+    min-height: 5vmin;
+    min-width: 100vmin;
+    font-size: 4vmin;
+    margin: auto;
+    margin-bottom: 6vmin;
+    display: none;
+    outline: none;
+}
+
+#inputBox{
+    padding-bottom: 0 !important;
+}
+
+#statsBox{
+    display: none;
+}
+
+#timer{
+    font-size: 5vmin;
+    padding-bottom: 12vmin;
+}
+
+#hits{
+    font-size: 5vmin;
+    text-align: center;
+}
+
+#points{
+    text-align: center;
+    margin: auto;
+    font-size: 8vmin;
+}
+
+#pointsNumber{
+    margin: auto;
+    margin-top: 1vmin;
+}
+
+#newGame{
+    outline: none;
+    font-size: 4vmin;
+    background: rgb(0, 102, 216);
+    color: white;
+    display: flex;
+    margin: auto;
+    margin-top: 2vmin;
+    padding: 0.8vmin 0.8vmin 0.8vmin 0.8vmin;
+    border-radius: 15%;
+}
+
+#rankingTitle{
+    font-size: 6vmin;
+    text-align: center;
+    margin-top: 4vmin;
+    margin-bottom: 2vmin;
+}
+
+#madeBy {
+    margin-top: 1vmin;
+    font-size: 2vmin;
+    text-align: center;
+    position: absolute;
+    padding: 0 0 0 0;
+    bottom: 1%;
+    width: 99%;
+}
+
+#scoreBox{
+    display: none;
+}
+
+.stats{
+    grid-area: 1 / 1 / span 2 / 1;
+    margin: auto;
+    padding: 3vmin 0 0 3vmin;
+    font-size: 5vmin;
+}
+
+.donut {
+    grid-area: 1 / 1 / span 2 / span 1;
+    margin: auto;
+    text-align: center;
+    max-height: 95vmin;
+}
+
+.letter{
+    color: white;
+    position: absolute;
+    border-radius: 50%;
+    border: solid white 0.15em;
+    height: 1em;
+    width: 1em;
+    font-size: 1.8vmin;
+    padding: 0.4vmin 0.45vmin 0.6vmin 0.45vmin;
+    background: radial-gradient(circle at 1vmin 1vmin, #1da8f8, #000);
+}
+
+#instructions {
+    margin: auto;
+    text-align: center;
+    grid-area: 1 / 1 / span 3 / span 1;
+    font-size: 3vmin;
+}
+
+#questions {
+    margin: auto;
+    text-align: center;
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+
+
+.input {
+    grid-area: 4 / 1 / span 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainTitle::after {
+    content:'';
+    color:white;
+    animation: write 5s linear infinite;
+    animation-delay: 2s;
+  }
+  
+  @keyframes write {
+
+    1% {
+        content:'P|';
+    }
+    3% {
+        content:'PA|';
+    }
+    5% {
+        content:'PAS|';
+    }
+    7% {
+        content:'PASA|';
+    }
+    9% {
+        content:'PASAP|';
+    }
+    11%{
+        content:'PASAPA|';
+    }
+    13% {
+        content:'PASAPAL|';
+    }
+    15% {
+        content:'PASAPALA|';
+    }
+    17% {
+        content:'PASAPALAB|';
+    }
+    19% {
+        content:'PASAPALABR|';
+    }
+    21% {
+        content:'PASAPALABRA|';
+    }
+    30% {
+        content:'PASAPALABRA\00a0';
+    }
+    39% {
+        content:'PASAPALABRA|';
+    }
+    48% {
+        content:'PASAPALABRA\00a0';
+    }
+    55% {
+        content:'PASAPALABRA|';
+    }
+    64% {
+        content:'PASAPALABRA\00a0';
+    }
+    73% {
+        content:'PASAPALABRA|';
+    }
+    82% {
+        content:'PASAPALABRA|';
+    }
+    84% {
+        content:'PASAPALABR|';
+    }
+    86% {
+        content:'PASAPALAB|';
+    }
+    88% {
+        content:'PASAPALA|';
+    }
+    90% {
+        content:'PASAPAL|';
+    }
+    92%{
+        content:'PASAPA|';
+    }
+    94% {
+        content:'PASAP|';
+    }
+    96% {
+        content:'PASA|';
+    }
+    98% {
+        content:'PAS|';
+    }
+    100% {
+        content:'PA|';
+    }
+}

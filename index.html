@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type="text/css" href = "index.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="icon" href="images/favicon.png" type="image/x-icon">
+        <title>
+            Pasapalabra 👌👌👌
+        </title>
+    </head>
+    <body class = 'container'>
+        <div class="pasapalabra" id='pasapalabra'>
+            <h1 class='mainTitle' id='pasapalabraTitle'></h1>
+            <div class="box stats" id='statsBox'>
+                <div class ='box' id='timerBox'>
+                    <p id='timer'>
+                        150
+                    </p>
+                </div>
+                <div class='box' id='hitsBox'>
+                    <p id='hits'>
+                        0
+                    </p>
+                </div>
+            </div>
+            <div class="box donut" id='donutLetters'>
+                <div class ='letter' id='letterA'>A</div>
+                <div class ='letter' id='letterB'>B</div>
+                <div class ='letter' id='letterC'>C</div>
+                <div class ='letter' id='letterD'>D</div>
+                <div class ='letter' id='letterE'>E</div>
+                <div class ='letter' id='letterF'>F</div>
+                <div class ='letter' id='letterG'>G</div>
+                <div class ='letter' id='letterH'>H</div>
+                <div class ='letter' id='letterI'>I</div>
+                <div class ='letter' id='letterJ'>J</div>
+                <div class ='letter' id='letterK'>K</div>
+                <div class ='letter' id='letterL'>L</div>
+                <div class ='letter' id='letterM'>M</div>
+                <div class ='letter' id='letterN'>N</div>
+                <div class ='letter' id='letterÑ'>Ñ</div>
+                <div class ='letter' id='letterO'>O</div>
+                <div class ='letter' id='letterP'>P</div>
+                <div class ='letter' id='letterQ'>Q</div>
+                <div class ='letter' id='letterR'>R</div>
+                <div class ='letter' id='letterS'>S</div>
+                <div class ='letter' id='letterT'>T</div>
+                <div class ='letter' id='letterU'>U</div>
+                <div class ='letter' id='letterV'>V</div>
+                <div class ='letter' id='letterW'>W</div>
+                <div class ='letter' id='letterX'>X</div>
+                <div class ='letter' id='letterY'>Y</div>
+                <div class ='letter' id='letterZ'>Z</div>
+            </div>
+            <div class="box" id='instructions'>
+                <h3>
+                    ¡Bienvenido al juego de Pasapalabra de Skylab Coders Academy!
+                </h3>
+                <p>
+                    Basado en el exitoso concurso de televisión Pasapalabra de Telecinco, las normas son muy sencillas:
+                </p>
+                <p>
+                    Se mostraran unas definiciones por pantalla y deberás responder con la palabra a la que corresponden. Si no sabes
+                    una palabra puedes decir Pasapalabra y dejar esa definición para más adelante.
+                </p>
+                <p>
+                    El programa es sensible a los acentos, debe introducrise la palabra sin tilde. Introducir ENTER con la respuesta en blanco es equivalente a 
+                    hacer Pasapalabra.
+                </p>
+                <p>
+                    Si escribes 'ME RINDO' el juego terminará y entrarás en el ranking con el número de aciertos, fallos y tiempo restante en el que te rindas.
+                </p>
+                <p>
+                    Tras pulsar Play e introducir tu usuario se mostrará la primera pregunta y empezará la cuenta atrás. 
+                </p>
+            </div>
+            <div id='questions'>
+                Introduce tu nombre de usuario
+            </div>
+            <div class="box input">
+                <button class='play' id='playButton'>
+                    Play
+                </button>
+            </div>
+            <div class='box input' id='inputBox'>
+                <input id='answers' type='text' autocomplete="off">
+            </div>
+        </div>
+        <div class='box' id='scoreBox'>
+            <div id='points'>Tu puntuación
+                <p id='pointsNumber'>
+                    0
+                </p>
+            </div>
+            <button id='newGame'>
+                ¿Juego nuevo?
+            </button>
+            <div class='ranking'>
+                <p id='rankingTitle'>
+                    Ranking
+                </p>
+                <table>
+					<thead>
+						<tr>
+							<th>Posición</th>
+							<th>Jugador</th>
+							<th>Aciertos</th>
+							<th>Fallos</th>
+                            <th>Tiempo Restante</th>
+						</tr>
+					</thead>
+					<tbody id='rankingBody'>
+					</tbody>
+				</table>
+            </div>
+        </div>
+    </body>   
+    <footer id='madeBy'>
+        👾 Made by Fernando Gómez 👾
+    </footer>
+    <script src="index.js"></script>
+</html>
